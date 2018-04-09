@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh(docker run -p 8080:8080 -t springio/gs-spring-boot-docker)
                 echo 'Building..'
             }
         }
